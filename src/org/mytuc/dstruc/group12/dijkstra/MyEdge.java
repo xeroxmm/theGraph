@@ -1,9 +1,9 @@
 package org.mytuc.dstruc.group12.dijkstra;
 
 public class MyEdge  {
-	MyNode start;//边的一端
-	MyNode end;//边的另一端
-	float distance;//边的距离
+	MyNode start;
+	MyNode end;
+	float distance;//the distance of edge
 	
 	public MyEdge(MyMap map, String line) {
 		String[] params = line.split(";");
@@ -13,7 +13,9 @@ public class MyEdge  {
 		this.distance = Float.valueOf(params[2]);
 	}
 	/**
-	 * 获取边的另一端。这里假定给定node是边的连接点，不再进行检查。
+	 * 
+         Get the other side of the edge. This assumes that the given node is the connection point of the edge and 
+	 no longer checks it.
 	 * @param node
 	 * @return
 	 */
