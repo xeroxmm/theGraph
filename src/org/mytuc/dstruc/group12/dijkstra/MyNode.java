@@ -6,9 +6,9 @@ import java.util.List;
 import java.util.Map;
 
 public class MyNode {
-	String name;//当前节点的名字
-	Map<String, MyEdge> edges;//与当前节点连接的边
-	List<MyEdge> shortPath;//记录了从begin到当前节点的边
+	String name;//the name of current node
+	Map<String, MyEdge> edges;//the edge of current node connected
+	List<MyEdge> shortPath;//Records the edge from begin to the current node
 	float speedFactor;
 	int type;//0:static,1:+-;2:*;3:^;-1:begin or end
 	
