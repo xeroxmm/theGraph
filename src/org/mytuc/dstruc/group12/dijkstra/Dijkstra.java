@@ -10,17 +10,20 @@ public class Dijkstra {
 	public static List<MyEdge> getShortPath(MyMap map, MyNode begin, MyNode end, double initSpeed) {
 		Map<String, NodeWrapper> nodesWrapper = initNodesWrapperMap(map, begin);
 		PriorityQueue<NodeWrapper> unknowQueue = initUnknowQueue(nodesWrapper, begin);
-		//若未求得最短耗时的节点队列还有节点，则继续循环
+		//if we have not get shortpath and node,continue loop
 		while (unknowQueue.size() > 0) {
-			//弹出未确定最短耗时队列中当前耗时最少的节点。该节点已经不可能有更小的耗时。
+			//The node that has currently spent the least time in the shortest time-consuming queue is ejected.
+			//This node can no longer be less time-consuming。
 			NodeWrapper curNode = unknowQueue.poll();
-			//使用上一步弹出的确定最短耗时节点更新其他节点的耗时
+			//Use the last popup to determine the time required to update other nodes with the shortest
+			//time-consuming node
 			updateWeight(begin, curNode, nodesWrapper, unknowQueue, initSpeed);
 		}
 		return end.getShortPath();
 	}
 	/**
-	 * 记录全部节点的HashMap。和最小队列共用实例。
+	 * 
+          Record the HashMap for all nodes. Share the instance with the smallest queue
 	 * @param map
 	 * @param begin
 	 * @return
@@ -35,7 +38,7 @@ public class Dijkstra {
 	}
 
 	/**
-	 * 初始化最小队列。调用其poll方法可获得耗时最短的节点
+	 * Initialize the minimum queue. Call its poll method to get the node with the shortest time
 	 * @param map
 	 * @param begin
 	 */
@@ -47,7 +50,7 @@ public class Dijkstra {
 	}
 
 	/**
-	 * 调整未知最短耗时节点的耗时
+	 * Adjust the time-consuming time of unknown and shortest time-consuming nodes
 	 * @param curNode
 	 */
 	private static void updateWeight(MyNode begin, NodeWrapper curNode, Map<String, NodeWrapper> nodesWrapper, PriorityQueue<NodeWrapper> unknowQueue, double initSpeed) {
@@ -69,7 +72,8 @@ public class Dijkstra {
 		}
 	}
 	/**
-	 * 计算从起点到node点的耗时
+	 * 
+          Calculate the time from the starting point to the node point
 	 * @param begin
 	 * @param shortPath
 	 * @param node
