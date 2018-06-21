@@ -11,7 +11,7 @@ public class Application {
 		MyMap map = loadMap();
 		List<MyEdge> shortPath = Dijkstra.getShortPath(map, map.begin, map.end, 1);
 		MyNode curNode = map.getBegin();
-		//打印最小耗时路径
+		// print the minimum time path
 		double time = 0;
 		double speed = 1;
 		for (MyEdge edge : shortPath) {
