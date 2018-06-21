@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="theGraph:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/theGraph_jar</output-path>
+    <root id="archive" name="theGraph.jar">
+      <element id="module-output" name="theGraph" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,53 @@
+# --------------------------- #
+|      Read In nodes.csv      |
+# --------------------------- #
+New Node (ID: 0, Factor: 0.0, Type: -1)
+New Node (ID: 7, Factor: 3.0, Type: 0)
+New Node (ID: 13, Factor: 1000.0, Type: 2)
+New Node (ID: 23, Factor: -5.0, Type: 1)
+New Node (ID: 12, Factor: 3.0, Type: 1)
+New Node (ID: 21, Factor: 0.0, Type: -1)
+New Node (ID: 9, Factor: 0.5, Type: 2)
+New Node (ID: 42, Factor: 7.0, Type: 1)
+New Node (ID: 113, Factor: 0.0, Type: 3)
+
+# --------------------------- #
+|      Read In arces.csv      |
+# --------------------------- #
+New Edge from 0 -> 7
+New Edge from 7 -> 0
+New Edge from 0 -> 9
+New Edge from 9 -> 0
+New Edge from 7 -> 9
+New Edge from 9 -> 7
+New Edge from 7 -> 13
+New Edge from 13 -> 7
+New Edge from 7 -> 23
+New Edge from 23 -> 7
+New Edge from 9 -> 42
+New Edge from 42 -> 9
+New Edge from 23 -> 12
+New Edge from 12 -> 23
+New Edge from 12 -> 42
+New Edge from 42 -> 113
+New Edge from 113 -> 42
+New Edge from 12 -> 21
+New Edge from 113 -> 21
+New Edge from 21 -> 113
+
+Map initialized: From 0 to 21
+
+# ----------------------- #
+|      Shortest Path      |
+# ----------------------- #
+0->9 (t: 10s , v: 1.0 )
+9->42 (t: 60s , v: 0.5 )
+42->113 (t: 9s , v: 7.5 )
+113->21 (t: 5s , v: 56.25 )
+
+# ---------------- #
+|      Result      |
+# ---------------- #
+time cost:84.66666666666666
+Saving to File...
+DONE
